@@ -1,0 +1,19 @@
+.typewriter-container {
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.typewriter-container::after {
+  content: "|";
+  display: inline-block;
+  margin-left: 5px;
+  animation: blink 0.8s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
