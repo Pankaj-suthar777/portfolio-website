@@ -1,4 +1,6 @@
+"use client";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import Button from "./button";
 
@@ -22,13 +24,12 @@ const ProjectCard = ({ description, image, title, liveLink }: Props) => {
           unoptimized
         />
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 transition-opacity duration-200 ease-in-out pointer-events-none group-hover:opacity-100">
-          <a
-            href={liveLink}
-            className="text-white z-20 text-2xl font-semibold cursor-pointer underline underline-offset-4"
-          >
-            Live Demo
-          </a>
+        <div className="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 transition-opacity duration-200 ease-in-out group-hover:opacity-100">
+          <Link href={liveLink} target="_blank">
+            <span className="text-white z-20 text-2xl font-semibold cursor-pointer underline underline-offset-4">
+              Live Demo
+            </span>
+          </Link>
         </div>
       </div>
 
