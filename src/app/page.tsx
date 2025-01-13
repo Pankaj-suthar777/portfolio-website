@@ -1,5 +1,6 @@
 import PageContainer from "@/components/PageContainer";
 import PageTitle from "@/components/PageTitle";
+import Image from "next/image";
 import React from "react";
 
 const Home = () => {
@@ -16,6 +17,15 @@ const Home = () => {
         high-quality results. With a positive attitude and a growth mindset, I
         am ready to make a meaningful contribution and achieve great things.
       </p>
+
+      <Image
+        className="mt-8"
+        alt=""
+        unoptimized
+        width={300}
+        height={300}
+        src={"/gif/222700.gif"}
+      />
     </PageContainer>
   );
 };

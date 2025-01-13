@@ -7,7 +7,7 @@ interface Props {
 
 const ProjectsTab = ({ selectedTab, setSelectedTab }: Props) => {
   return (
-    <>
+    <div className="flex justify-center">
       <div className="border border-slate-400 rounded-lg flex min-w-[400px]">
         <div
           className={`w-1/3 border-r border-slate-400 p-2 text-center cursor-pointer ${
@@ -34,7 +34,7 @@ const ProjectsTab = ({ selectedTab, setSelectedTab }: Props) => {
           <span>Games</span>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
