@@ -15,6 +15,7 @@ const ProjectsPage = () => {
             image={project.image}
             title={project.title}
             description={project.description}
+            liveLink={project.liveLink}
           />
         ))}
       </div>

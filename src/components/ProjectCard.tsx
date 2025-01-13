@@ -6,19 +6,29 @@ interface Props {
   image: string;
   title: string;
   description: string;
+  liveLink: string;
 }
 
-const ProjectCard = ({ description, image, title }: Props) => {
+const ProjectCard = ({ description, image, title, liveLink }: Props) => {
   return (
     <div className="border flex flex-col border-slate-400 rounded-lg p-4 transition-transform transform hover:scale-105 hover:shadow-lg justify-between">
-      <Image
-        src={image}
-        alt="project-image"
-        width={100}
-        height={100}
-        className="w-full object-contain h-[200px]"
-        unoptimized
-      />
+      <div className="relative w-full h-[200px] overflow-hidden rounded-lg group">
+        <Image
+          src={image}
+          alt="project-image"
+          width={400}
+          height={200}
+          className="w-full h-full object-cover"
+          unoptimized
+        />
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 transition-opacity duration-200 ease-in-out pointer-events-none group-hover:opacity-100">
+          <a href={liveLink} className="text-white text-2xl font-bold">
+            Live Demo
+          </a>
+        </div>
+      </div>
+
       <p className="text-center my-6 text-xl font-semibold tracking-wider">
         {title}
       </p>
