@@ -2,6 +2,7 @@ import React from "react";
 // import TypewriterEffect from "./TextEffect";
 import navigation from "@/constants/navigation";
 import Footer from "./Footer";
+import Link from "next/link";
 
 const MainLayout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -9,20 +10,20 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
       <div className="w-[35%] flex justify-end">
         <div className="p-8 py-12 flex flex-col items-end">
           <h1 className="text-4xl font-medium">Pankaj Suthar</h1>
-          <div className="w-[120px] mt-8 mb-8">
-            {/* <TypewriterEffect /> */}
-            hello i code
-          </div>
+          {/* <div className="w-[120px] mt-8 mb-8">
+            <TypewriterEffect />
+          </div> */}
+          <div className="mt-8 mb-8 italic">hello, i code </div>
           <div dir="rtl">
             <ul className="list-disc list-inside ml-auto">
               {navigation.map((item, i) => (
                 <li key={i} className="mb-4">
-                  <a
+                  <Link
                     href={item.href}
                     className="text-lg underline underline-offset-4"
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

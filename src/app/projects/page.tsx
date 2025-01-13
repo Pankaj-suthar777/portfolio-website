@@ -1,23 +1,34 @@
+"use client";
 import PageContainer from "@/components/PageContainer";
 import PageTitle from "@/components/PageTitle";
 import ProjectCard from "@/components/ProjectCard";
-import projects from "@/constants/projects";
-import React from "react";
+import ProjectsTab from "@/components/projects/ProjectsTab";
+import projects, { ProjectType } from "@/constants/projects";
+import React, { useState } from "react";
 
 const ProjectsPage = () => {
+  const [selectedTab, setSelectedTab] = useState<ProjectType>("web");
+
   return (
     <PageContainer>
       <PageTitle title="Projects" />
-      <div className="grid grid-cols-2 gap-4">
-        {projects.map((project, i) => (
-          <ProjectCard
-            key={i}
-            image={project.image}
-            title={project.title}
-            description={project.description}
-            liveLink={project.liveLink}
-          />
-        ))}
+      <ProjectsTab selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
+      <div className="grid grid-cols-2 gap-4 mt-8">
+        {projects.map((project, i) => {
+          if (selectedTab === project.type) {
+            return (
+              <ProjectCard
+                key={i}
+                image={project.image}
+                title={project.title}
+                description={project.description}
+                liveLink={project.liveLink}
+              />
+            );
+          } else {
+            return;
+          }
+        })}
       </div>
     </PageContainer>
   );

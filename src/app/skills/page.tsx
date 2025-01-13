@@ -21,8 +21,8 @@ const SkillsScreen = () => {
         </div>
 
         <div>
-          <h3 className="text-lg font-semibold">Tools: </h3>
-          <p>Git & GitHub, Docker, AWS, Linux</p>
+          <h3 className="text-lg font-semibold">DevOps: </h3>
+          <p>Docker, Kubernetes, AWS</p>
         </div>
         <div>
           <h3 className="text-lg font-semibold">Game Development: </h3>
