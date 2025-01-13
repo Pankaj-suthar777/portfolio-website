@@ -1,16 +1,11 @@
 import type { Metadata } from "next";
-import { Poppins, Rubik } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import MainLayout from "@/components/MainLayout";
 
 const geistMono = Poppins({
   subsets: ["latin"],
   weight: ["100", "400"],
-});
-
-export const geistRubik = Rubik({
-  subsets: ["latin"],
-  weight: ["300", "600"],
 });
 
 export const metadata: Metadata = {

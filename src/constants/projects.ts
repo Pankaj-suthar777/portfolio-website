@@ -2,7 +2,7 @@ interface Project {
   image: string;
   title: string;
   description: string;
-  liveLink?: string;
+  liveLink: string;
 }
 const projects: Project[] = [
   {

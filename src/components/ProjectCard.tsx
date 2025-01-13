@@ -23,7 +23,10 @@ const ProjectCard = ({ description, image, title, liveLink }: Props) => {
         />
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 transition-opacity duration-200 ease-in-out pointer-events-none group-hover:opacity-100">
-          <a href={liveLink} className="text-white text-2xl font-bold">
+          <a
+            href={liveLink}
+            className="text-white z-20 text-2xl font-semibold cursor-pointer underline underline-offset-4"
+          >
             Live Demo
           </a>
         </div>
