@@ -6,10 +6,10 @@ const SkillsScreen = () => {
   return (
     <PageContainer>
       <PageTitle title="Skills" />
-      <div className="grid grid-cols-2 gap-4 text-black">
+      <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 text-black">
         <div>
           <h3 className="text-lg font-semibold">Languages: </h3>
-          JavaScript, TypeScript, Python, GDScrpt
+          JavaScript, TypeScript, Python, GDScript
         </div>
         <div>
           <h3 className="text-lg font-semibold">Frontend Frameworks: </h3>

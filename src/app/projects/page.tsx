@@ -13,7 +13,7 @@ const ProjectsPage = () => {
     <PageContainer>
       <PageTitle title="Projects" />
       <ProjectsTab selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
-      <div className="grid grid-cols-2 gap-4 mt-8">
+      <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 mt-8">
         {projects.map((project, i) => {
           if (selectedTab === project.type) {
             return (
