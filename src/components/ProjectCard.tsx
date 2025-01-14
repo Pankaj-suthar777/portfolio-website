@@ -3,15 +3,17 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Button from "./button";
+import { ProjectType } from "@/constants/projects";
 
 interface Props {
   image: string;
   title: string;
   description: string;
+  type: ProjectType;
   liveLink: string;
 }
 
-const ProjectCard = ({ description, image, title, liveLink }: Props) => {
+const ProjectCard = ({ description, image, title, liveLink, type }: Props) => {
   return (
     <div className="border flex flex-col border-slate-400 rounded-lg p-4 transition-transform transform hover:scale-105 hover:shadow-lg justify-between">
       <div className="relative w-full h-[200px] overflow-hidden rounded-lg group">
@@ -20,7 +22,9 @@ const ProjectCard = ({ description, image, title, liveLink }: Props) => {
           alt="project-image"
           width={400}
           height={200}
-          className="w-full h-full object-cover"
+          className={`w-full h-full ${
+            type === "mobile" ? "object-contain" : "object-cover"
+          }`}
           unoptimized
         />
         {/* Overlay */}

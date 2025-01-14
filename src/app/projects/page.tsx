@@ -18,6 +18,7 @@ const ProjectsPage = () => {
           if (selectedTab === project.type) {
             return (
               <ProjectCard
+                type={project.type}
                 key={i}
                 image={project.image}
                 title={project.title}

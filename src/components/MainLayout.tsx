@@ -10,8 +10,8 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
     <div className="w-full min-h-screen flex lg:flex-row flex-col text-black max-w-[1400px]">
       <div className="lg:w-[35%] w-full flex lg:justify-end justify-center items-start">
         <div className="p-8 lg:py-12 flex flex-col lg:items-end items-center">
-          <h1 className="text-4xl font-medium text-center lg:text-right">
-            Pankaj Suthar
+          <h1 className="text-4xl font-medium text-center lg:text-right cursor-pointer">
+            <Link href={"/"}>Pankaj Suthar</Link>
           </h1>
           {/* <div className="w-[120px] mt-8 mb-8">
             <TypewriterEffect />
