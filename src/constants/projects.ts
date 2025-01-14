@@ -6,6 +6,8 @@ interface Project {
   description: string;
   liveLink: string;
   type: ProjectType;
+  images: string[];
+  long_description: string;
 }
 
 const projects: Project[] = [
@@ -16,6 +18,18 @@ const projects: Project[] = [
       "EventsYoulike is a full-stack web application built with Next.js, MongoDB, and Cleark that simplifies event booking for both organizers and attendees.",
     liveLink: "https://next-events-you-like.vercel.app/",
     type: "web",
+    long_description: `EventYoulike is a full-stack web application built with Next.js, MongoDB, and Cleark that simplifies event booking for both organizers and attendees.
+
+Features:
+
+Event creation and management: Admins can easily create new events, upload multiple images using Firebase Storage, and define various ticket types (basic, premium, etc.). User booking: Users can browse events, view details including image galleries, and book tickets seamlessly. Available tickets decrease in real-time as bookings are confirmed. Admin dashboard: Admins have a dedicated dashboard to view all bookings, generate reports, and analyze total event revenue. Authentication: Cleark provides secure authentication for both users and admins, ensuring a safe and reliable experience. Payment processing: Stripe integration enables smooth and secure payment processing for event bookings. Technologies:
+
+Frontend: Next.js, a React framework that offers features like server-side rendering (SSR) and static site generation (SSG) for optimal performance and SEO. Backend: MongoDB, a NoSQL database that provides flexibility for storing event data, user information, and booking details. Authentication: Cleark, a user authentication platform that simplifies user registration, login, and access control. Image Storage: Firebase Storage, a cloud storage solution from Google that securely stores and manages event images. Payments: Stripe, a popular payment gateway that facilitates secure online transactions for event bookings.`,
+    images: [
+      "/images/next-eventsYouLike_page-0001.jpg",
+      "/images/next-eventsYouLike_page-0001.jpg",
+      "/images/next-eventsYouLike_page-0001.jpg",
+    ],
   },
   {
     image: "/images/swift-rivals-mern.vercel.app_(3).png",
@@ -24,6 +38,8 @@ const projects: Project[] = [
       "Developed a platform for users to follow each other, create posts, and engage in real-time one-on-one and group chats Integrated features for upvoting/downvoting posts and adding nested comments to enhance community interaction",
     liveLink: "https://swift-rivals-mern.vercel.app/",
     type: "web",
+    long_description: "",
+    images: ["/images/swift-rivals-mern.vercel.app_(3).png"],
   },
   {
     image: "/images/rmp_page-0002.jpg",
@@ -32,6 +48,8 @@ const projects: Project[] = [
       "Introducing RMP, a user-friendly web application dedicated to refurbished products. With RMP, users can effortlessly create an account, securely log in, and experience enhanced authentication through JWT (JSON Web Token). This platform empowers individuals to sell their refurbished items with ease.",
     liveLink: "https://refurbhised-maket-place.onrender.com/",
     type: "web",
+    long_description: "",
+    images: ["/images/rmp_page-0002.jpg"],
   },
   {
     title: "Multivendor E-Commerce",
@@ -40,6 +58,8 @@ const projects: Project[] = [
     image: "/images/mutivendor-ecommerce-mern-frontend.vercel.app_.png",
     liveLink: "https://mutivendor-ecommerce-mern-frontend.vercel.app/",
     type: "web",
+    long_description: "",
+    images: ["/images/mutivendor-ecommerce-mern-frontend.vercel.app_.png"],
   },
   {
     title: "ProShipShop E-Commerce Shop",
@@ -48,6 +68,8 @@ const projects: Project[] = [
     image: "/images/proshipshop.onrender.com_ (2).png",
     liveLink: "https://proshipshop.onrender.com/",
     type: "web",
+    long_description: "",
+    images: ["/images/proshipshop.onrender.com_ (2).png"],
   },
   {
     title: "Fast Pizza",
@@ -56,6 +78,8 @@ const projects: Project[] = [
     image: "/images/pizza-react-app-000.netlify.app_.png",
     liveLink: "https://pizza-react-app-000.netlify.app/",
     type: "web",
+    long_description: "",
+    images: ["/images/pizza-react-app-000.netlify.app_.png"],
   },
   {
     title: "Swift Media Mobile",
@@ -64,6 +88,8 @@ const projects: Project[] = [
     liveLink: "https://github.com/Pankaj-suthar777/swift-media-react-native",
     image: "/images/IMG-20241213-WA0016.jpg",
     type: "mobile",
+    long_description: "",
+    images: ["/images/IMG-20241213-WA0016.jpg"],
   },
   {
     title: "Podify Player",
@@ -72,6 +98,8 @@ const projects: Project[] = [
     image: "/images/unnamed (1)_page-0001.jpg",
     liveLink: "https://github.com/Pankaj-suthar777/podify-react-native",
     type: "mobile",
+    long_description: "",
+    images: ["/images/unnamed (1)_page-0001.jpg"],
   },
   {
     title: "Chat app",
@@ -80,6 +108,8 @@ const projects: Project[] = [
     liveLink: "https://github.com/Pankaj-suthar777/react-native-whatsapp",
     type: "mobile",
     image: "/images/WhatsApp Image 2024-12-13 at 14.19.00_53fbb93c.jpg",
+    long_description: "",
+    images: ["/images/WhatsApp Image 2024-12-13 at 14.19.00_53fbb93c.jpg"],
   },
 ];
 

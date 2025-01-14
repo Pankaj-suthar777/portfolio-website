@@ -42,7 +42,9 @@ const ProjectCard = ({ description, image, title, liveLink, type }: Props) => {
       </p>
       <p>{description}</p>
       <div className="mt-4 flex gap-4">
-        <Button>View</Button>
+        <Link href={"/projects/" + title} className="w-full">
+          <Button>View</Button>
+        </Link>
         {/* <Button>Live</Button> */}
       </div>
     </div>
