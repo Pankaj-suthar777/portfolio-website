@@ -64,7 +64,6 @@ body {
   margin-bottom: 1rem;
   border-bottom: 2px solid #ddd;
   padding-bottom: 0.5rem;
-  margin: 100;
 }
 
 .markdown-content h2 {
@@ -72,12 +71,10 @@ body {
   font-weight: bold;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  margin: 100;
 }
 
 .markdown-content p {
   margin: 1rem 0;
-  margin: 100;
 }
 
 .markdown-content ul {

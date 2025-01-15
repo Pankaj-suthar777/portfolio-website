@@ -7,7 +7,6 @@ interface Project {
   liveLink: string;
   type: ProjectType;
   images: string[];
-  long_description: string;
 }
 
 const projects: Project[] = [
@@ -18,17 +17,16 @@ const projects: Project[] = [
       "EventsYoulike is a full-stack web application built with Next.js, MongoDB, and Cleark that simplifies event booking for both organizers and attendees.",
     liveLink: "https://next-events-you-like.vercel.app/",
     type: "web",
-    long_description: `EventYoulike is a full-stack web application built with Next.js, MongoDB, and Cleark that simplifies event booking for both organizers and attendees.
-
-Features:
-
-Event creation and management: Admins can easily create new events, upload multiple images using Firebase Storage, and define various ticket types (basic, premium, etc.). User booking: Users can browse events, view details including image galleries, and book tickets seamlessly. Available tickets decrease in real-time as bookings are confirmed. Admin dashboard: Admins have a dedicated dashboard to view all bookings, generate reports, and analyze total event revenue. Authentication: Cleark provides secure authentication for both users and admins, ensuring a safe and reliable experience. Payment processing: Stripe integration enables smooth and secure payment processing for event bookings. Technologies:
-
-Frontend: Next.js, a React framework that offers features like server-side rendering (SSR) and static site generation (SSG) for optimal performance and SEO. Backend: MongoDB, a NoSQL database that provides flexibility for storing event data, user information, and booking details. Authentication: Cleark, a user authentication platform that simplifies user registration, login, and access control. Image Storage: Firebase Storage, a cloud storage solution from Google that securely stores and manages event images. Payments: Stripe, a popular payment gateway that facilitates secure online transactions for event bookings.`,
     images: [
       "/images/next-eventsYouLike_page-0001.jpg",
-      "/images/next-eventsYouLike_page-0001.jpg",
-      "/images/next-eventsYouLike_page-0001.jpg",
+      "/images/EventsYoulike/next-eventsYouLike_page-0002.jpg",
+      "/images/EventsYoulike/next-eventsYouLike_page-0003.jpg",
+      "/images/EventsYoulike/next-eventsYouLike_page-0004.jpg",
+      "/images/EventsYoulike/next-eventsYouLike_page-0005.jpg",
+      "/images/EventsYoulike/next-eventsYouLike_page-0006.jpg",
+      "/images/EventsYoulike/next-eventsYouLike_page-0007.jpg",
+      "/images/EventsYoulike/next-eventsYouLike_page-0008.jpg",
+      "/images/EventsYoulike/next-eventsYouLike_page-0009.jpg",
     ],
   },
   {
@@ -38,8 +36,31 @@ Frontend: Next.js, a React framework that offers features like server-side rende
       "Developed a platform for users to follow each other, create posts, and engage in real-time one-on-one and group chats Integrated features for upvoting/downvoting posts and adding nested comments to enhance community interaction",
     liveLink: "https://swift-rivals-mern.vercel.app/",
     type: "web",
-    long_description: "",
-    images: ["/images/swift-rivals-mern.vercel.app_(3).png"],
+    images: [
+      "/images/swift-rivals-mern.vercel.app_(3).png",
+      "/images/SwiftMedia/swift-rivals-mern.vercel.app_ (1).png",
+      "/images/SwiftMedia/swift-rivals-mern.vercel.app_ (2).png",
+      "/images/SwiftMedia/swift-rivals-mern.vercel.app_ (4).png",
+      "/images/SwiftMedia/swift-rivals-mern.vercel.app_ (5).png",
+      "/images/SwiftMedia/swift-rivals-mern.vercel.app_ (6).png",
+      "/images/SwiftMedia/swift-rivals-mern.vercel.app_ (7).png",
+      "/images/SwiftMedia/swift-rivals-mern.vercel.app_ (8).png",
+      "/images/SwiftMedia/swift-rivals-mern.vercel.app_ (9).png",
+      "/images/SwiftMedia/swift-rivals-mern.vercel.app_ (10).png",
+      "/images/SwiftMedia/swift-rivals-mern.vercel.app_ (11).png",
+      "/images/SwiftMedia/swift-rivals-mern.vercel.app_ (12).png",
+      "/images/SwiftMedia/swift-rivals-mern.vercel.app_ (13).png",
+      "/images/SwiftMedia/swift-rivals-mern.vercel.app_ (14).png",
+      "/images/SwiftMedia/swift-rivals-mern.vercel.app_ (15).png",
+      "/images/SwiftMedia/swift-rivals-mern.vercel.app_ (16).png",
+      "/images/SwiftMedia/swift-rivals-mern.vercel.app_ (17).png",
+      "/images/SwiftMedia/swift-rivals-mern.vercel.app_ (18).png",
+      "/images/SwiftMedia/swift-rivals-mern.vercel.app_ (19).png",
+      "/images/SwiftMedia/swift-rivals-mern.vercel.app_ (20).png",
+      "/images/SwiftMedia/swift-rivals-mern.vercel.app_ (21).png",
+      "/images/SwiftMedia/swift-rivals-mern.vercel.app_ (22).png",
+      "/images/SwiftMedia/swift-rivals-mern.vercel.app_.png",
+    ],
   },
   {
     image: "/images/rmp_page-0002.jpg",
@@ -48,8 +69,15 @@ Frontend: Next.js, a React framework that offers features like server-side rende
       "Introducing RMP, a user-friendly web application dedicated to refurbished products. With RMP, users can effortlessly create an account, securely log in, and experience enhanced authentication through JWT (JSON Web Token). This platform empowers individuals to sell their refurbished items with ease.",
     liveLink: "https://refurbhised-maket-place.onrender.com/",
     type: "web",
-    long_description: "",
-    images: ["/images/rmp_page-0002.jpg"],
+    images: [
+      "/images/RMP/rmp_page-0001.jpg",
+      "/images/RMP/rmp_page-0002.jpg",
+      "/images/RMP/rmp_page-0003.jpg",
+      "/images/RMP/rmp_page-0004.jpg",
+      "/images/RMP/rmp_page-0005.jpg",
+      "/images/RMP/rmp_page-0006.jpg",
+      "/images/RMP/rmp_page-0007.jpg",
+    ],
   },
   {
     title: "Multivendor E-Commerce",
@@ -58,7 +86,6 @@ Frontend: Next.js, a React framework that offers features like server-side rende
     image: "/images/mutivendor-ecommerce-mern-frontend.vercel.app_.png",
     liveLink: "https://mutivendor-ecommerce-mern-frontend.vercel.app/",
     type: "web",
-    long_description: "",
     images: ["/images/mutivendor-ecommerce-mern-frontend.vercel.app_.png"],
   },
   {
@@ -68,8 +95,18 @@ Frontend: Next.js, a React framework that offers features like server-side rende
     image: "/images/proshipshop.onrender.com_ (2).png",
     liveLink: "https://proshipshop.onrender.com/",
     type: "web",
-    long_description: "",
-    images: ["/images/proshipshop.onrender.com_ (2).png"],
+    images: [
+      "/images/Proshipshop/proshipshop.onrender.com_ (2).png",
+      "/images/Proshipshop/proshipshop.onrender.com_ (3).png",
+      "/images/Proshipshop/proshipshop.onrender.com_ (4).png",
+      "/images/Proshipshop/proshipshop.onrender.com_ (5).png",
+      "/images/Proshipshop/proshipshop.onrender.com_ (6).png",
+      "/images/Proshipshop/proshipshop.onrender.com_ (7).png",
+      "/images/Proshipshop/proshipshop.onrender.com_ (8).png",
+      "/images/Proshipshop/proshipshop.onrender.com_ (9).png",
+      "/images/Proshipshop/proshipshop.onrender.com_ (10).png",
+      "/images/Proshipshop/proshipshop.onrender.com_ (11).png",
+    ],
   },
   {
     title: "Fast Pizza",
@@ -78,7 +115,6 @@ Frontend: Next.js, a React framework that offers features like server-side rende
     image: "/images/pizza-react-app-000.netlify.app_.png",
     liveLink: "https://pizza-react-app-000.netlify.app/",
     type: "web",
-    long_description: "",
     images: ["/images/pizza-react-app-000.netlify.app_.png"],
   },
   {
@@ -88,8 +124,26 @@ Frontend: Next.js, a React framework that offers features like server-side rende
     liveLink: "https://github.com/Pankaj-suthar777/swift-media-react-native",
     image: "/images/IMG-20241213-WA0016.jpg",
     type: "mobile",
-    long_description: "",
-    images: ["/images/IMG-20241213-WA0016.jpg"],
+    images: [
+      "/images/Swift Media Mobile/IMG-20241213-WA0016.jpg",
+      "/images/Swift Media Mobile/IMG-20241213-WA0001.jpg",
+      "/images/Swift Media Mobile/IMG-20241213-WA0002.jpg",
+      "/images/Swift Media Mobile/IMG-20241213-WA0003.jpg",
+      "/images/Swift Media Mobile/IMG-20241213-WA0004.jpg",
+      "/images/Swift Media Mobile/IMG-20241213-WA0005.jpg",
+      "/images/Swift Media Mobile/IMG-20241213-WA0006.jpg",
+      "/images/Swift Media Mobile/IMG-20241213-WA0007.jpg",
+      "/images/Swift Media Mobile/IMG-20241213-WA0008.jpg",
+      "/images/Swift Media Mobile/IMG-20241213-WA0009.jpg",
+      "/images/Swift Media Mobile/IMG-20241213-WA0010.jpg",
+      "/images/Swift Media Mobile/IMG-20241213-WA0011.jpg",
+      "/images/Swift Media Mobile/IMG-20241213-WA0012.jpg",
+      "/images/Swift Media Mobile/IMG-20241213-WA0013.jpg",
+      "/images/Swift Media Mobile/IMG-20241213-WA0014.jpg",
+      "/images/Swift Media Mobile/IMG-20241213-WA0015.jpg",
+      "/images/Swift Media Mobile/IMG-20241213-WA0016.jpg",
+      "/images/Swift Media Mobile/IMG-20241213-WA0017.jpg",
+    ],
   },
   {
     title: "Podify Player",
@@ -98,8 +152,13 @@ Frontend: Next.js, a React framework that offers features like server-side rende
     image: "/images/unnamed (1)_page-0001.jpg",
     liveLink: "https://github.com/Pankaj-suthar777/podify-react-native",
     type: "mobile",
-    long_description: "",
-    images: ["/images/unnamed (1)_page-0001.jpg"],
+    images: [
+      "/images/PodifyPlayer/unnamed (1)_page-0001.jpg",
+      "/images/PodifyPlayer/unnamed (1)_page-0002.jpg",
+      "/images/PodifyPlayer/unnamed (1)_page-0003.jpg",
+      "/images/PodifyPlayer/unnamed (1)_page-0004.jpg",
+      "/images/PodifyPlayer/unnamed (1)_page-0005.jpg",
+    ],
   },
   {
     title: "Chat app",
@@ -108,8 +167,16 @@ Frontend: Next.js, a React framework that offers features like server-side rende
     liveLink: "https://github.com/Pankaj-suthar777/react-native-whatsapp",
     type: "mobile",
     image: "/images/WhatsApp Image 2024-12-13 at 14.19.00_53fbb93c.jpg",
-    long_description: "",
-    images: ["/images/WhatsApp Image 2024-12-13 at 14.19.00_53fbb93c.jpg"],
+    images: [
+      "/images/Whatsapp Clone React Native/WhatsApp Image 2024-12-13 at 14.18.58_bc60d6d8.jpg",
+      "/images/Whatsapp Clone React Native/WhatsApp Image 2024-12-13 at 14.19.00_53fbb93c.jpg",
+      "/images/Whatsapp Clone React Native/WhatsApp Image 2024-12-13 at 14.19.01_46e1a065.jpg",
+      "/images/Whatsapp Clone React Native/WhatsApp Image 2024-12-13 at 14.19.01_4198d0a4.jpg",
+      "/images/Whatsapp Clone React Native/WhatsApp Image 2024-12-13 at 14.19.01_79125799.jpg",
+      "/images/Whatsapp Clone React Native/WhatsApp Image 2024-12-13 at 14.19.02_8fdc0877.jpg",
+      "/images/Whatsapp Clone React Native/WhatsApp Image 2024-12-13 at 14.19.02_60fd7455.jpg",
+      "/images/Whatsapp Clone React Native/WhatsApp Image 2024-12-13 at 14.19.02_ce35db7c.jpg",
+    ],
   },
 ];
 

@@ -25,7 +25,6 @@ const ProjectCard = ({ description, image, title, liveLink, type }: Props) => {
           className={`w-full h-full ${
             type === "mobile" ? "object-contain" : "object-cover"
           }`}
-          unoptimized
         />
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 transition-opacity duration-200 ease-in-out group-hover:opacity-100">

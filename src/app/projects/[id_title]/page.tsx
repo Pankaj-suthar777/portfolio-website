@@ -9,7 +9,8 @@ import ReactMarkdown from "react-markdown";
 
 const ProjectPage = () => {
   const { id_title } = useParams();
-  const project = projects.find((pro) => pro.title === id_title);
+  const decodedTitle = decodeURIComponent(id_title); // Decode the URL-encoded title
+  const project = projects.find((pro) => pro.title === decodedTitle); // Compare with decoded title
   const [markdownContent, setMarkdownContent] = useState("");
 
   useEffect(() => {
