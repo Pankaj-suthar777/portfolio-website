@@ -6,6 +6,7 @@ const BlogsPage = () => {
   return (
     <PageContainer>
       <PageTitle title="Blogs" />
+      <div className="flex justify-center items-center py-8">No blogs yet.</div>
     </PageContainer>
   );
 };

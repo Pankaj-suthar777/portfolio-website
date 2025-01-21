@@ -27,7 +27,7 @@ const Footer = () => {
       <span> | </span>
       <Link
         className="underline underline-offset-4"
-        href={"https://x.com/Inyourdream0007"}
+        href={"https://www.linkedin.com/in/pankaj-suthar-550b0a2a6/"}
       >
         Linkdin
       </Link>

@@ -8,9 +8,9 @@ interface Props {
 const ProjectsTab = ({ selectedTab, setSelectedTab }: Props) => {
   return (
     <div className="flex justify-center">
-      <div className="border border-slate-400 rounded-lg flex lg:max-w-[400px] w-full">
+      <div className="border border-slate-400 rounded-md flex lg:max-w-[400px] w-full">
         <div
-          className={`w-1/3 border-r border-slate-400 p-2 text-xs lg:text-sm text-center cursor-pointer items-center flex justify-center ${
+          className={`w-1/3 rounded-l-md border-r border-slate-400 p-2 text-xs lg:text-sm text-center cursor-pointer items-center flex justify-center ${
             selectedTab === "web" ? "bg-slate-200 dark:text-black" : ""
           } ${
             selectedTab === "web"
@@ -34,7 +34,7 @@ const ProjectsTab = ({ selectedTab, setSelectedTab }: Props) => {
           <span>Mobile Apps</span>
         </div>
         <div
-          className={`w-1/3 p-2 text-xs lg:text-sm text-center cursor-pointer items-center flex justify-center ${
+          className={`w-1/3 rounded-r-md p-2 text-xs lg:text-sm text-center cursor-pointer items-center flex justify-center ${
             selectedTab === "game" ? "bg-slate-200 dark:text-black" : ""
           } ${
             selectedTab === "game"

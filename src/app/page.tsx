@@ -8,8 +8,8 @@ const Home = () => {
     <PageContainer>
       <PageTitle title="About me" />
       <p className="text-black dark:text-white">
-        Hi! I{"'"}m Pankaj Suthar interested in system design, backend
-        application and web development.
+        Hi! I{"'"}m Pankaj Suthar interested in System Design, Backend
+        Application and Web Development.
       </p>
       <p className="text-black dark:text-white mt-12">
         I am a motivated and versatile individual, always eager to take on new

@@ -23,8 +23,8 @@ const ProjectCard = ({
   githubLink,
 }: Props) => {
   return (
-    <div className="border flex flex-col border-slate-400 rounded-lg p-4 transition-transform transform hover:scale-105 hover:shadow-lg justify-between">
-      <div className="relative w-full h-[200px] overflow-hidden rounded-lg group">
+    <div className="border flex flex-col border-slate-400 rounded-md p-4 transition-transform transform hover:scale-105 hover:shadow-lg justify-between">
+      <div className="relative w-full h-[200px] overflow-hidden rounded-md group">
         <Image
           src={image}
           alt="project-image"
