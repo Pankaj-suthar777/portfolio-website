@@ -1,6 +1,6 @@
-import ContactForm from "@/components/ContactForm";
-import PageContainer from "@/components/PageContainer";
-import PageTitle from "@/components/PageTitle";
+import ContactForm from "@/components/contact/ContactForm";
+import PageContainer from "@/components/layout/PageContainer";
+import PageTitle from "@/components/layout/PageTitle";
 import React from "react";
 
 const ContactPage = () => {

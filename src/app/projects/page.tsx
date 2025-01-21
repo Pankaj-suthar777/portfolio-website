@@ -1,7 +1,7 @@
 "use client";
-import PageContainer from "@/components/PageContainer";
-import PageTitle from "@/components/PageTitle";
-import ProjectCard from "@/components/ProjectCard";
+import PageContainer from "@/components/layout/PageContainer";
+import PageTitle from "@/components/layout/PageTitle";
+import ProjectCard from "@/components/projects/ProjectCard";
 import ProjectsTab from "@/components/projects/ProjectsTab";
 import projects, { ProjectType } from "@/constants/projects";
 import React, { useState } from "react";
@@ -24,6 +24,7 @@ const ProjectsPage = () => {
                 title={project.title}
                 description={project.description}
                 liveLink={project.liveLink}
+                githubLink={project.githubLink}
               />
             );
           } else {

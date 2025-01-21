@@ -1,5 +1,5 @@
-import PageContainer from "@/components/PageContainer";
-import PageTitle from "@/components/PageTitle";
+import PageContainer from "@/components/layout/PageContainer";
+import PageTitle from "@/components/layout/PageTitle";
 import React from "react";
 
 const BlogsPage = () => {
