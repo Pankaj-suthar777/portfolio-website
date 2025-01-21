@@ -4,10 +4,11 @@ import navigation from "@/constants/navigation";
 import Footer from "./Footer";
 import Link from "next/link";
 import HamburgerMenu from "./HamburgerMenu";
+import ThemeSwitch from "./ThemeSwitch";
 
 const MainLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="w-full min-h-screen flex lg:flex-row flex-col text-black max-w-[1400px]">
+    <div className="w-full min-h-screen flex lg:flex-row flex-col text-black max-w-[1400px] dark:text-white dark:bg-black">
       <div className="lg:w-[35%] w-full flex lg:justify-end justify-center items-start">
         <div className="p-8 lg:py-12 flex flex-col lg:items-end items-center">
           <h1 className="text-4xl font-medium text-center lg:text-right cursor-pointer">
@@ -16,8 +17,8 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
           {/* <div className="w-[120px] mt-8 mb-8">
             <TypewriterEffect />
           </div> */}
-          <div className="mt-8 mb-8 italic text-center lg:text-right">
-            hello, i code
+          <div className="mt-8 mb-8 italic text-center lg:text-right flex gap-4 items-center">
+            <ThemeSwitch /> hello, i code
           </div>
           <HamburgerMenu />
           <div dir="rtl" className="hidden lg:flex">

@@ -6,7 +6,7 @@ const SkillsScreen = () => {
   return (
     <PageContainer>
       <PageTitle title="Skills" />
-      <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 text-black">
+      <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 text-black dark:text-white">
         <div>
           <h3 className="text-lg font-semibold">Languages: </h3>
           JavaScript, TypeScript, Python, GDScript

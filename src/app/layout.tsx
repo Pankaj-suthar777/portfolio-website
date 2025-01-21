@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import MainLayout from "@/components/MainLayout";
+import Providers from "./providers";
 
 const geistMono = Poppins({
   subsets: ["latin"],
@@ -10,7 +11,6 @@ const geistMono = Poppins({
 
 export const metadata: Metadata = {
   title: "Pankaj Suthar",
-  description: "",
 };
 
 export default function RootLayout({
@@ -20,8 +20,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
-      <body className={`${geistMono.className} bg-white`}>
-        <MainLayout>{children}</MainLayout>
+      <body className={`${geistMono.className} bg-white dark:bg-black`}>
+        <Providers>
+          <MainLayout>{children}</MainLayout>
+        </Providers>
       </body>
     </html>
   );
