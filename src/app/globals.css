@@ -13,11 +13,17 @@
     --foreground: #ededed;
   }
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
 
 .custom-button {
@@ -49,4 +55,18 @@ body {
 
 .custom-button:hover .custom-button-text {
   color: #181717;
+}
+
+
+.project-card {
+  transition: 
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform; /* Only if needed */
+  transform: translateZ(0); /* Force hardware acceleration */
+}
+
+.project-card:hover {
+  transform: scale(1.02); /* More subtle animation */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
