@@ -14,7 +14,9 @@ interface BlogCarouselProps {
 
 const BlogCarousel: React.FC<BlogCarouselProps> = ({ posts }) => {
   if (!posts || posts.length === 0) {
-    return null;
+    return (
+      <div className="flex justify-center items-center py-8">No blogs yet.</div>
+    );
   }
 
   // Duplicate posts for a seamless infinite scroll effect
