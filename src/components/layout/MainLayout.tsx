@@ -18,7 +18,7 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
             <TypewriterEffect />
           </div> */}
           <div className="mt-8 mb-8 italic text-center lg:text-right flex gap-4 items-center">
-            <ThemeSwitch /> hello, i code
+            <ThemeSwitch /> <span> hello, i code</span>
           </div>
           <HamburgerMenu />
           <div dir="rtl" className="hidden lg:flex">
@@ -37,7 +37,7 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
           </div>
         </div>
       </div>
-      <div className="w-[1.5px] bg-black h-auto"></div>
+      <div className="w-[1.5px] bg-black h-auto dark:bg-white"></div>
       <div className="flex-1">
         {children}
         <div className="flex justify-center pb-20">

@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning={true}>
+    <html lang="en">
       <body className={`${geistMono.className} bg-white dark:bg-black`}>
         <Providers>
           <MainLayout>{children}</MainLayout>
