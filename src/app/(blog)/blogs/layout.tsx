@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
-import "./globals.css";
-import MainLayout from "@/components/layout/MainLayout";
-import Providers from "./providers";
+import "../../globals.css";
 
 const geistMono = Poppins({
   subsets: ["latin"],
@@ -13,7 +11,7 @@ export const metadata: Metadata = {
   title: "Pankaj Suthar",
 };
 
-export default function RootLayout({
+export default function BlogLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -21,9 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistMono.className} bg-white dark:bg-black`}>
-        <Providers>
-          <MainLayout>{children}</MainLayout>
-        </Providers>
+        <div className="max-w-[800px] mx-auto">{children}</div>
       </body>
     </html>
   );
