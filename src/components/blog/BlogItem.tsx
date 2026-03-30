@@ -7,21 +7,14 @@ const BlogItem = ({ post }: { post: BlogDocument }) => {
   return (
     <Link
       href={`/blogs/${post._id}`}
-      key={`${post._id}`}
-      className="inline-block mx-4 p-4 min-w-[250px] max-w-full bg-white dark:bg-black rounded-sm transition-shadow duration-300 hover:cursor-pointer"
+      className="flex items-start justify-between gap-4 py-4 border-b border-slate-200 dark:border-slate-800 hover:opacity-70 transition-opacity group"
     >
-      <h3 className="text-md font-semibold text-blue-500 dark:text-blue-400 mb-1 whitespace-normal break-words">
+      <h3 className="text-sm text-black dark:text-white break-words">
         {post.title}
       </h3>
-      <div className="flex justify-between">
-        <p className="text-xs text-gray-500 dark:text-gray-400 mb-2">
-          {moment(post.createdAt).format("MMMM Do YYYY")}
-        </p>
-
-        <p className="text-xs text-blue-500 dark:text-blue-300 underline mt-2 inline-block">
-          Read more
-        </p>
-      </div>
+      <p className="text-xs text-gray-400 dark:text-gray-500 shrink-0 mt-0.5">
+        {moment(post.createdAt).format("MMM D, YYYY")}
+      </p>
     </Link>
   );
 };

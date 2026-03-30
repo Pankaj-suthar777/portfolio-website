@@ -1,10 +1,5 @@
-import dotenv from "dotenv";
-
-// Load .env file
-dotenv.config();
-
 // Validate essential variables
-const requiredEnvVars = ["MONGODB_URI", "REDIS_URL"];
+const requiredEnvVars = ["MONGODB_URI"];
 
 requiredEnvVars.forEach((varName) => {
   if (!process.env[varName]) {

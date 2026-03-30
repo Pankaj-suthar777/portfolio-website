@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "../../globals.css";
+import Providers from "../../providers";
 
-const geistMono = Poppins({
+const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["100", "400"],
+  weight: ["100", "400", "500", "600"],
 });
 
 export const metadata: Metadata = {
@@ -18,8 +19,10 @@ export default function BlogLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistMono.className} bg-white dark:bg-black`}>
-        <div className="max-w-[800px] mx-auto">{children}</div>
+      <body className={`${poppins.className} bg-white dark:bg-black`}>
+        <Providers>
+          <div className="text-black dark:text-white">{children}</div>
+        </Providers>
       </body>
     </html>
   );

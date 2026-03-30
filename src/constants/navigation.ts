@@ -8,6 +8,7 @@ const navigation: Navigation[] = [
     href: "/",
   },
   { name: "Projects", href: "/projects" },
+  { name: "Experience", href: "/experience" },
   { name: "Blogs", href: "/blogs" },
 
   { name: "Skills", href: "/skills" },

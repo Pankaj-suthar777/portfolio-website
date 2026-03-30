@@ -30,7 +30,7 @@ const projects: Project[] = [
   },
   {
     image: "/images/rmp_page-0002.jpg",
-    title: "Refurbhised Market Place",
+    title: "Refurbished Market Place",
     description:
       "Introducing RMP, a user-friendly web application dedicated to refurbished products. With RMP, users can effortlessly create an account, securely log in, and experience enhanced authentication through JWT (JSON Web Token). This platform empowers individuals to sell their refurbished items with ease.",
     liveLink: "https://refurbhised-maket-place.onrender.com/",

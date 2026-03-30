@@ -5,25 +5,17 @@ import React from "react";
 
 const BlogCard = ({ post }: { post: BlogDocument }) => {
   return (
-    <div
-      key={`${post._id}`}
-      className="border border-slate-800 inline-block mx-4 p-4 min-w-[250px] max-w-[300px] bg-white dark:bg-black rounded-sm shadow-md hover:shadow-lg transition-shadow duration-300"
+    <Link
+      href={`/blogs/${post._id}`}
+      className="inline-block mx-3 p-4 min-w-[240px] max-w-[280px] border border-slate-200 dark:border-slate-800 rounded-md bg-white dark:bg-black hover:border-slate-400 dark:hover:border-slate-600 transition-colors duration-200 whitespace-normal"
     >
-      <h3 className="text-md font-semibold text-blue-600 dark:text-blue-400 mb-1 whitespace-normal break-words">
+      <h3 className="text-sm font-medium text-black dark:text-white mb-2 break-words line-clamp-2">
         {post.title}
       </h3>
-      <p className="text-xs text-gray-500 dark:text-gray-400 mb-2">
-        {moment(post.createdAt).format("MMMM Do YYYY")}
+      <p className="text-xs text-gray-400 dark:text-gray-500">
+        {moment(post.createdAt).format("MMM D, YYYY")}
       </p>
-
-      <Link
-        href={`/blogs/${post._id}`}
-        rel="noopener noreferrer"
-        className="text-xs text-blue-500 dark:text-blue-300 hover:underline mt-2 inline-block"
-      >
-        Read more
-      </Link>
-    </div>
+    </Link>
   );
 };
 

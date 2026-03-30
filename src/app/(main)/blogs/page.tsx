@@ -19,15 +19,15 @@ const BlogsPage = async () => {
     <PageContainer>
       <PageTitle title="Blogs" />
       {blogs.length > 0 ? (
-        <div className="grid grid-cols-1 gap-2">
+        <div>
           {blogs.map((blog) => (
-            <BlogItem post={blog} />
+            <BlogItem key={String(blog._id)} post={blog} />
           ))}
         </div>
       ) : (
-        <div className="flex justify-center items-center py-8">
-          No blogs yet.
-        </div>
+        <p className="text-sm text-gray-500 dark:text-gray-400 italic">
+          No posts yet — check back soon.
+        </p>
       )}
     </PageContainer>
   );

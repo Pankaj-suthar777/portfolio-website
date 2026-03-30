@@ -8,6 +8,14 @@
   }
 }
 
+@layer base {
+  *:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -27,53 +35,24 @@ html {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  transform: translateZ(0);
-  backface-visibility: hidden;
-  perspective: 1000px;
-}
-
-.custom-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 15px;
-  gap: 15px;
-  background-color: #181717;
-  outline: 3px #181717 solid;
-  outline-offset: -3px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  transition: 400ms;
-  width: 100%;
-}
-
-.custom-button:hover {
-  background-color: transparent;
-}
-
-.custom-button-text {
-  color: white;
-  font-weight: 700;
-  font-size: 1em;
-  transition: 400ms;
-}
-
-.custom-button:hover .custom-button-text {
-  color: #181717;
 }
 
 .project-card {
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: transform; /* Only if needed */
-  transform: translateZ(0); /* Force hardware acceleration */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .project-card:hover {
-  transform: scale(1.02); /* More subtle animation */
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transform: scale(1.01);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out both;
 }
 
 /* Add animation for the blog carousel */
@@ -97,72 +76,74 @@ body {
 
 /* Fade effect for carousel edges */
 
-.group::before,
-.group::after {
+.carousel-wrapper::before,
+.carousel-wrapper::after {
   content: "";
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 4rem;
-  z-index: 10; /* Ensure it's above the scrolling content */
+  width: 3rem;
+  z-index: 10;
 }
 
-.group::before {
+.carousel-wrapper::before {
   left: 0;
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 1) 20%,
-    transparent 50%
-  );
-  border-top-right-radius: 50%;
-  border-bottom-right-radius: 50%;
+  background: linear-gradient(to right, white 0%, transparent 100%);
 }
 
-.group::after {
+.carousel-wrapper::after {
   right: 0;
-  background: linear-gradient(
-    to left,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 1) 20%,
-    transparent 50%
-  );
-  border-top-left-radius: 50%;
-  border-bottom-left-radius: 50%;
+  background: linear-gradient(to left, white 0%, transparent 100%);
 }
 
-.dark .group::before {
-  background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 1) 20%,
-    transparent 50%
-  );
-  border-top-right-radius: 50%;
-  border-bottom-right-radius: 50%;
+.dark .carousel-wrapper::before {
+  background: linear-gradient(to right, black 0%, transparent 100%);
 }
 
-.dark .group::after {
-  background: linear-gradient(
-    to left,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 1) 20%,
-    transparent 50%
-  );
-  border-top-left-radius: 50%;
-  border-bottom-left-radius: 50%;
+.dark .carousel-wrapper::after {
+  background: linear-gradient(to left, black 0%, transparent 100%);
 }
 
 .blog-content {
-  font-family: "Segoe UI", Roboto, sans-serif;
-  line-height: 1.7;
+  font-family: inherit;
+  line-height: 1.8;
   color: #333;
-  padding: 1rem;
-  max-width: 800px;
-  margin: auto;
 }
 
-/* Headings */
+.dark .blog-content {
+  color: #d1d5db;
+}
+
+.dark .blog-content h1,
+.dark .blog-content h2,
+.dark .blog-content h3,
+.dark .blog-content h4 {
+  color: #f3f4f6;
+}
+
+.dark .blog-content h1 {
+  border-bottom-color: #374151;
+}
+
+.dark .blog-content pre {
+  background: #1f2937;
+  color: #e5e7eb;
+}
+
+.dark .blog-content code {
+  background: #1f2937;
+  color: #e5e7eb;
+}
+
+.dark .blog-content blockquote {
+  border-left-color: #4b5563;
+  color: #9ca3af;
+  background: #111827;
+}
+
+.dark .blog-content hr {
+  border-top-color: #374151;
+}
 .blog-content h1,
 .blog-content h2,
 .blog-content h3,

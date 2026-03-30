@@ -14,8 +14,13 @@ const ProjectsPage = () => {
       <PageTitle title="Projects" />
       <ProjectsTab selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
       <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 mt-8">
-        {projects.map((project, i) => {
-          if (selectedTab === project.type) {
+        {projects.filter((p) => p.type === selectedTab).length === 0 ? (
+          <div className="col-span-2 flex justify-center items-center py-16 text-gray-500 dark:text-gray-400 text-sm italic">
+            No {selectedTab} projects yet — check back soon.
+          </div>
+        ) : (
+          projects.map((project, i) => {
+            if (selectedTab !== project.type) return null;
             return (
               <ProjectCard
                 type={project.type}
@@ -27,10 +32,8 @@ const ProjectsPage = () => {
                 githubLink={project.githubLink}
               />
             );
-          } else {
-            return;
-          }
-        })}
+          })
+        )}
       </div>
     </PageContainer>
   );

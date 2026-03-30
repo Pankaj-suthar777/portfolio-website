@@ -16,11 +16,11 @@ const Button = ({
     <button
       disabled={loading}
       type={type}
-      className={`flex justify-center items-center px-4 py-2 gap-4 bg-[#181717] outline outline-3 outline-[#181717]  rounded-md border-none cursor-pointer transition-all duration-400 w-full ${
+      className={`flex justify-center items-center px-4 py-2 gap-4 bg-[#181717] outline outline-3 outline-[#181717] rounded-md border-none cursor-pointer transition-all duration-400 w-full text-white ${
         loading
-          ? "opacity-50 cursor-not-allowed hover:text-white"
-          : "hover:bg-transparent"
-      } hover:text-[#181717] text-white dark:text-white`}
+          ? "opacity-50 cursor-not-allowed"
+          : "hover:bg-transparent hover:text-[#181717] dark:hover:text-white dark:hover:bg-white/10"
+      }`}
       onClick={onClick}
     >
       <p className="font-bold text-base transition-all duration-400">
