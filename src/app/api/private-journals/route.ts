@@ -22,24 +22,24 @@ export async function POST(request: NextRequest) {
       { message: "Private journal created successfully", journal: savedJournal },
       { status: 201 }
     );
-  } catch (error: any) {
+  } catch (error) {
     console.error("Error creating private journal:", error);
     return NextResponse.json(
-      { message: "Error creating private journal", error: error.message },
+      { message: "Error creating private journal", error: (error as Error).message },
       { status: 500 }
     );
   }
 }
 
-export async function GET(request: NextRequest) {
+export async function GET() {
   await connectDB();
   try {
     const journals = await PrivateJournal.find({}).sort({ createdAt: -1 });
     return NextResponse.json({ journals }, { status: 200 });
-  } catch (error: any) {
+  } catch (error) {
     console.error("Error fetching private journals:", error);
     return NextResponse.json(
-      { message: "Error fetching private journals", error: error.message },
+      { message: "Error fetching private journals", error: (error as Error).message },
       { status: 500 }
     );
   }

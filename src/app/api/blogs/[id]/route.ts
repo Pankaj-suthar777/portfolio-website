@@ -14,9 +14,9 @@ export async function GET(
       return NextResponse.json({ message: "Blog not found" }, { status: 404 });
     }
     return NextResponse.json({ blog }, { status: 200 });
-  } catch (error: any) {
+  } catch (error) {
     return NextResponse.json(
-      { message: "Error fetching blog", error: error.message },
+      { message: "Error fetching blog", error: (error as Error).message },
       { status: 500 }
     );
   }

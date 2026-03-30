@@ -24,26 +24,26 @@ export async function POST(request: NextRequest) {
       { message: "Blog created successfully", blog: savedBlog },
       { status: 201 }
     );
-  } catch (error: any) {
+  } catch (error) {
     console.error("Error creating blog:", error);
     return NextResponse.json(
-      { message: "Error creating blog", error: error.message },
+      { message: "Error creating blog", error: (error as Error).message },
       { status: 500 }
     );
   }
 }
 
-export async function GET(request: NextRequest) {
+export async function GET() {
   try {
     await connectDB();
 
     const blogs = await Blog.find({}).sort({ createdAt: -1 }); // Sort by newest first
 
     return NextResponse.json({ blogs }, { status: 200 });
-  } catch (error: any) {
+  } catch (error) {
     console.error("Error fetching blogs:", error);
     return NextResponse.json(
-      { message: "Error fetching blogs", error: error.message },
+      { message: "Error fetching blogs", error: (error as Error).message },
       { status: 500 }
     );
   }

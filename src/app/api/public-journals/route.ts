@@ -22,24 +22,24 @@ export async function POST(request: NextRequest) {
       { message: "Public journal created successfully", journal: savedJournal },
       { status: 201 }
     );
-  } catch (error: any) {
+  } catch (error) {
     console.error("Error creating public journal:", error);
     return NextResponse.json(
-      { message: "Error creating public journal", error: error.message },
+      { message: "Error creating public journal", error: (error as Error).message },
       { status: 500 }
     );
   }
 }
 
-export async function GET(request: NextRequest) {
+export async function GET() {
   await connectDB();
   try {
     const journals = await PublicJournal.find({}).sort({ createdAt: -1 });
     return NextResponse.json({ journals }, { status: 200 });
-  } catch (error: any) {
+  } catch (error) {
     console.error("Error fetching public journals:", error);
     return NextResponse.json(
-      { message: "Error fetching public journals", error: error.message },
+      { message: "Error fetching public journals", error: (error as Error).message },
       { status: 500 }
     );
   }
