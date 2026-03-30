@@ -11,7 +11,7 @@ interface Project {
 
 const projects: Project[] = [
   {
-    image: "/images/next-eventsYouLike_page-0001.jpg",
+    image: "/images/next-eventsYouLike.jpg",
     title: "EventsYoulike",
     description:
       "EventsYoulike is a full-stack web application built with Next.js, MongoDB, and Cleark that simplifies event booking for both organizers and attendees.",
