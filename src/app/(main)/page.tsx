@@ -65,6 +65,22 @@ const Home = async () => {
         </div>
       </div>
 
+      {/* Blog Carousel */}
+      <div className="mt-16 pt-12 border-t border-slate-200 dark:border-slate-800">
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="text-base font-semibold text-black dark:text-white">
+            Latest Blogs
+          </h2>
+          <Link
+            href="/blogs"
+            className="text-sm underline underline-offset-4 text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors"
+          >
+            All posts →
+          </Link>
+        </div>
+        <BlogCarousel posts={blogs} />
+      </div>
+
       {/* Work Experience */}
       <div className="mt-16 pt-12 border-t border-slate-200 dark:border-slate-800">
         <h2 className="text-base font-semibold text-black dark:text-white mb-6">
@@ -81,8 +97,9 @@ const Home = async () => {
               </span>
             </div>
             <p className="text-gray-600 dark:text-gray-400 text-sm">
-              Working as a full-stack engineer building and maintaining two SaaS products and a cloud video desk service.
-              Handling frontend, backend, and DevOps activities.
+              Working as a full-stack engineer building and maintaining two SaaS
+              products and a cloud video desk service. Handling frontend,
+              backend, and DevOps activities.
             </p>
           </div>
 
@@ -96,30 +113,29 @@ const Home = async () => {
               </span>
             </div>
             <ul className="text-gray-600 dark:text-gray-400 text-sm space-y-1 list-disc list-inside">
-              <li>Developed and maintained IoT-based applications across both frontend and backend.</li>
-              <li>Worked on 13+ IoT projects involving real-time data and device integration.</li>
-              <li>Optimized SQL queries to improve performance and reduce execution time.</li>
-              <li>Debugged and resolved issues in large codebases (1000+ lines of components).</li>
-              <li>Contributed to building efficient, scalable, and reliable system architectures.</li>
+              <li>
+                Developed and maintained IoT-based applications across both
+                frontend and backend.
+              </li>
+              <li>
+                Worked on 13+ IoT projects involving real-time data and device
+                integration.
+              </li>
+              <li>
+                Optimized SQL queries to improve performance and reduce
+                execution time.
+              </li>
+              <li>
+                Debugged and resolved issues in large codebases (1000+ lines of
+                components).
+              </li>
+              <li>
+                Contributed to building efficient, scalable, and reliable system
+                architectures.
+              </li>
             </ul>
           </div>
         </div>
-      </div>
-
-      {/* Blog Carousel */}
-      <div className="mt-16 pt-12 border-t border-slate-200 dark:border-slate-800">
-        <div className="flex items-center justify-between mb-6">
-          <h2 className="text-base font-semibold text-black dark:text-white">
-            Latest Posts
-          </h2>
-          <Link
-            href="/blogs"
-            className="text-sm underline underline-offset-4 text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors"
-          >
-            All posts →
-          </Link>
-        </div>
-        <BlogCarousel posts={blogs} />
       </div>
     </PageContainer>
   );
