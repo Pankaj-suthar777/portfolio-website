@@ -7,6 +7,8 @@ interface Props {
   params: Promise<{ id: string }>;
 }
 
+export const revalidate = 300;
+
 const BlogDetailPage = async ({ params }: Props) => {
   const { id } = await params;
   let blog: BlogDocument | null = null;

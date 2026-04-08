@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "../../globals.css";
 import Providers from "../../providers";
+import Footer from "@/components/layout/Footer";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -21,7 +22,12 @@ export default function BlogLayout({
     <html lang="en">
       <body className={`${poppins.className} bg-white dark:bg-black`}>
         <Providers>
-          <div className="text-black dark:text-white">{children}</div>
+          <div className="min-h-screen text-black dark:text-white flex flex-col">
+            <div className="flex-1">{children}</div>
+            <div className="px-4 pb-12 flex justify-center">
+              <Footer />
+            </div>
+          </div>
         </Providers>
       </body>
     </html>

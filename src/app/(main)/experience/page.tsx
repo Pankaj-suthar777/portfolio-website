@@ -1,12 +1,11 @@
 import PageContainer from "@/components/layout/PageContainer";
+import PageTitle from "@/components/layout/PageTitle";
 import React from "react";
 
 const Experience = () => {
   return (
     <PageContainer>
-      <h1 className="text-base font-semibold text-black dark:text-white mb-6">
-        Work Experience
-      </h1>
+      <PageTitle title="Work Experience" />
       <div className="space-y-8">
         <div>
           <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">

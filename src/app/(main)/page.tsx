@@ -1,15 +1,21 @@
 import PageContainer from "@/components/layout/PageContainer";
 import React from "react";
 import BlogCarousel from "@/components/blog/BlogCarousel";
-import Blog, { BlogDocument } from "@/models/blog.model";
+import Blog, { BlogListItem } from "@/models/blog.model";
 import dbConnect from "@/config/db";
 import Link from "next/link";
 
+export const revalidate = 300;
+
 const Home = async () => {
-  let blogs: BlogDocument[] = [];
+  let blogs: BlogListItem[] = [];
   try {
     await dbConnect();
-    blogs = await Blog.find({}).sort({ createdAt: -1 }).limit(6).lean();
+    blogs = await Blog.find({})
+      .select("_id title createdAt")
+      .sort({ createdAt: -1 })
+      .limit(6)
+      .lean<BlogListItem[]>();
   } catch (error) {
     console.error("Error fetching blogs:", error);
   }

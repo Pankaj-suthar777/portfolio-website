@@ -1,9 +1,9 @@
-import { BlogDocument } from "@/models/blog.model";
+import { BlogListItem } from "@/models/blog.model";
 import moment from "moment";
 import Link from "next/link";
 import React from "react";
 
-const BlogItem = ({ post }: { post: BlogDocument }) => {
+const BlogItem = ({ post }: { post: BlogListItem }) => {
   return (
     <Link
       href={`/blogs/${post._id}`}

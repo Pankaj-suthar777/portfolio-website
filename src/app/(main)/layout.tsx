@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import "../globals.css";
 import MainLayout from "@/components/layout/MainLayout";
 import Providers from "../providers";
+import PortfolioViewTracker from "@/components/analytics/PortfolioViewTracker";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -39,6 +40,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${poppins.className} bg-white dark:bg-black`}>
         <Providers>
+          <PortfolioViewTracker />
           <MainLayout>{children}</MainLayout>
         </Providers>
       </body>

@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import Blog from "@/models/blog.model";
 import connectDB from "@/config/db";
 import { blogSchema } from "@/schema/blog";
+import { revalidatePath } from "next/cache";
 
 export async function POST(request: NextRequest) {
   await connectDB();
@@ -19,6 +20,10 @@ export async function POST(request: NextRequest) {
 
     const newBlog = new Blog({ title, text });
     const savedBlog = await newBlog.save();
+
+    revalidatePath("/");
+    revalidatePath("/blogs");
+    revalidatePath(`/blogs/${savedBlog._id}`);
 
     return NextResponse.json(
       { message: "Blog created successfully", blog: savedBlog },

@@ -1,5 +1,9 @@
 // Validate essential variables
 const requiredEnvVars = ["MONGODB_URI"];
+const excludedViewIps = (process.env.VIEW_TRACKING_EXCLUDED_IPS || "")
+  .split(",")
+  .map((ipAddress) => ipAddress.trim())
+  .filter(Boolean);
 
 requiredEnvVars.forEach((varName) => {
   if (!process.env[varName]) {
@@ -13,6 +17,9 @@ export const config = {
     uri: process.env.MONGODB_URI!,
   },
   nodeEnv: process.env.NODE_ENV || "development",
+  viewTracking: {
+    excludedIps: excludedViewIps,
+  },
 };
 
 // Optional: Freeze the config object to prevent modification

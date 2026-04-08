@@ -1,9 +1,9 @@
-import { BlogDocument } from "@/models/blog.model";
+import { BlogListItem } from "@/models/blog.model";
 import moment from "moment";
 import Link from "next/link";
 import React from "react";
 
-const BlogCard = ({ post }: { post: BlogDocument }) => {
+const BlogCard = ({ post }: { post: BlogListItem }) => {
   return (
     <Link
       href={`/blogs/${post._id}`}
@@ -20,7 +20,7 @@ const BlogCard = ({ post }: { post: BlogDocument }) => {
 };
 
 interface BlogCarouselProps {
-  posts: BlogDocument[];
+  posts: BlogListItem[];
 }
 
 const BlogCarousel: React.FC<BlogCarouselProps> = ({ posts }) => {

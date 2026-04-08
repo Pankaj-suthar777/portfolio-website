@@ -7,6 +7,8 @@ export interface BlogDocument {
   createdAt: Date;
 }
 
+export type BlogListItem = Pick<BlogDocument, "_id" | "title" | "createdAt">;
+
 const blogSchema = new Schema<BlogDocument>(
   {
     title: {
